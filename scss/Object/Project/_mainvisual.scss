@@ -1,0 +1,10 @@
+@use "../../foundation/variable" as v;
+@use "../../foundation/mixin" as m;
+
+.p-mainvisual {
+  position: relative;
+  background-image: url(../../../img/mainvisual/mainvisual-sp.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 100%;
+}
