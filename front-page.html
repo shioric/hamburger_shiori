@@ -21,45 +21,46 @@
 </head>
 
 <body>
-  <div class="l-grid">
+  <div class="l-container c-grid">
     <!-- header -->
-    <header class="l-grid__item1" p-header>
-      <h1 class="p-header__logo c-title__main">Hamburger</h1>
+    <header class="l-header p-header">
+      <h1 class="c-title__main">Hamburger</h1>
       <form action="#" method="get" class="p-search-form">
         <input type="search" class="p-search-form__input c-form__input" placeholder="">
         <input type="submit" value="検索" class="p-search-form__button c-form__button">
       </form>
-      <h2 class="c-title__sub p-header">Menu</h2>
+      <h2 class="c-title__sub">Menu</h2>
     </header>
 
     <!-- contents -->
-    <article class="l-grid__item2 p-contents">
+    <main class="l-main p-main">
 
       <!-- mainvisual -->
       <div class="p-mainvisual c-bg">
-        <h2 class="p-mainvisual__title c-title__sub">ダミーサイト</h2>
+        <h2 class="p-mainvisual__title c-text__title--ja">ダミーサイト</h2>
       </div>
 
       <!-- guide -->
       <div class="p-guide">
         <ul class="p-guide__ul">
-          <li class="p-guide__li">
+          <li class="p-guide__li c-bg">
             <div class="p-guide__top">
-              <h2 class="p-guide__title">Take Out</h2>
-              <p class="p-guide__line"></p>
+              <h2 class="p-guide__title c-text__title--en">Take Out</h2>
+              <p class="p-guide__line c-line"></p>
+              <a href="#" class="p-guide__link"></a>
             </div>
             <div class="p-guide__bottom">
-              <dl class="p-guide__dl">
-                <dt class="p-guide__dt">Take OUT</dt>
-                <dd class="p-guide__dd">
+              <dl class="p-guide__dl c-bg--white">
+                <dt class="p-guide__dt c-text--en">Take OUT</dt>
+                <dd class="p-guide__dd c-text--ja">
                   当店のテイクアウトで利用できる商品を掲載しています
                 </dd>
               </dl>
             </div>
             <div class="p-guide__bottom">
-              <dl class="p-guide__dl">
-                <dt class="p-guide__dt">Take OUT</dt>
-                <dd class="p-guide__dd">
+              <dl class="p-guide__dl c-bg--white">
+                <dt class="p-guide__dt c-text--en">Take OUT</dt>
+                <dd class="p-guide__dd c-text--ja">
                   当店のテイクアウトで利用できる商品を掲載しています
                 </dd>
               </dl>
@@ -91,22 +92,29 @@
       </div>
 
       <!-- access -->
-      <section class="p-access">
-        <h2 class="p-access__title">見出しが入ります</h2>
-        <p class="p-access__line"></p>
-        <p class="p-access__text">
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-          テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-        </p>
+      <section class="p-access c-bg">
+        <div class="p-access__map-layer">
+          <div class="p-access__contents-area">
+            <div class="p-access__wrapper">
+              <h2 class="p-access__title c-text--ja">見出しが入ります</h2>
+              <p class="p-access__line c-line"></p>
+              <p class="p-access__text c-tect--ja">
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+              </p>
+            </div>
+          </div>
+          <div class="p-access__bg-layer"></div>
+        </div>
       </section>
-    </article>
+    </main>
 
     <!-- sidebar -->
-    <aside class="l-grid__item3 p-sidebar">
+    <aside class="l-sidebar p-sidebar">
       <ul class="p-sidebar__ul">
         <li class="p-sedebar__li">バーガー</li>
         <ul class="p-sidebar__sub-ul">
@@ -138,7 +146,7 @@
     </aside>
 
     <!-- footer -->
-    <footer class="l-grid__item4 p-footer">
+    <footer class="l-footer">
       <div class="p-footer__menu">
         <ul class="p-footer__menu">
           <li class="p-footer__menu-li">ショップ情報</li>

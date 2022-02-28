@@ -1,4 +1,69 @@
 @charset "UTF-8";
+html {
+  font-size: 62.5%;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+}
+
+.l-container {
+  display: grid;
+}
+
+@media screen and (min-width: 1025px) {
+  .l-footer {
+    grid-row: 3/4;
+    grid-column: 1/3;
+  }
+}
+
+.l-header {
+  width: 100%;
+  height: 217px;
+  background-color: #FFF7EF;
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 1025px) {
+  .l-header {
+    grid-row: 1/2;
+    grid-column: 1/2;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .l-main {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .l-sidebar {
+    grid-column: 2/3;
+    grid-column: 1/3;
+  }
+}
+
+.c-bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.c-bg--white {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
 .c-form__input {
   border: 1px solid #707070;
   /* 枠線 */
@@ -12,16 +77,123 @@
   /* 角丸 */
 }
 
-.c-title {
+@media screen and (min-width: 1025px) {
+  .c-grid {
+    grid-template-columns: 1fr 19%;
+    grid-template-rows: 217px 1fr 150px;
+  }
+}
+
+.c-text__title--ja {
+  font-family: "M PLUS 1p", sans-serif;
+}
+.c-text__title--en {
+  font-family: "Roboto", sans-serif;
+}
+
+.c-title__main {
   font-family: "Roboto", sans-serif;
   font-size: 2.5rem;
   font-weight: bold;
   color: #707070;
 }
+.c-title__sub {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #707070;
+}
 
-.p-header {
+.p-access {
   width: 100%;
-  background-color: #FFF7EF;
+  background-image: url("../../../img/map.jpg");
+  background-position: 0 0;
+}
+.p-access__map-layer {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.p-guide {
+  width: 100%;
+}
+.p-guide__ul {
+  color: #3C2A10;
+  flex-direction: column;
+  align-items: center;
+}
+.p-guide__li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 89%;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 600px) {
+  .p-guide__li {
+    width: 43%;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .p-guide__li {
+    width: 40%;
+  }
+}
+.p-guide__li:first-child {
+  background-image: url(../../img/takeout-sp.jpg);
+}
+.p-guide__li:nth-child(2) {
+  background-image: url(../../../img/eatin-sp.jpg);
+}
+.p-guide__title {
+  color: #EAEAEA;
+  font-size: 41px;
+  margin-top: 11px;
+  margin-left: 10px;
+}
+.p-guide__line {
+  margin-left: 3.5%;
+}
+.p-guide__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.p-guide__dt {
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: bold;
+  font-size: 22px;
+}
+.p-guide__dd {
+  font-size: 16px;
+}
+
+.p-mainvisual {
+  width: 100%;
+  height: 285px;
+  background-image: url(../../../img/mainvisual/mainvisual-sp.jpg);
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 600px) {
+  .p-mainvisual {
+    height: 285px;
+  }
+}
+.p-mainvisual__title {
+  color: #FFFFFF;
+  font-size: 2.25rem;
+  padding-left: 35px;
+}
+@media screen and (min-width: 1025px) {
+  .p-mainvisual__title {
+    font-size: 2.5rem;
+    padding-left: 86px;
+  }
 }
 
 .p-search-form {
@@ -31,22 +203,22 @@
 }
 
 /*================================
-	foundation
+	Foundation
 =================================*/
 /*================================
-	layout
+	Layout
 =================================*/
 /*================================
-	object
+	Object
 =================================*/
 /*================================
-	component
+	Component
 =================================*/
 /*================================
-	project
+	Project
 =================================*/
 /*================================
-	utility
+	Utility
 =================================*/
 /*================================
 	ヘッダーの設定

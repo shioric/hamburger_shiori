@@ -1,0 +1,9 @@
+@use "../Foundation/mixin" as m;
+@use "../Foundation/variable" as v;
+
+.l-footer {
+  @include m.media( pc ) {
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+}

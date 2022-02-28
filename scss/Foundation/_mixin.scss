@@ -1,12 +1,12 @@
 // ブレイクポイント
-$breakpoint: (
+$breakpoints: (
   sp: 'screen and (max-width: 599px)',
   tablet: 'screen and (min-width: 600px)',
   pc: 'screen and (min-width: 1025px)'
 );
 
-@mixin mq($bp) {
-  @media #{map-get($breakpoint,$bp)}{
+@mixin media($breakpoint) {
+  @media #{map-get($breakpoints, $breakpoint)}{
     @content;
   }
 }
