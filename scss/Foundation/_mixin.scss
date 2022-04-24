@@ -1,12 +1,14 @@
-// ブレイクポイント
+//ブレイクポイント変数設定
 $breakpoints: (
-  sp: 'screen and (max-width: 599px)',
-  tablet: 'screen and (min-width: 600px)',
-  pc: 'screen and (min-width: 1025px)'
-);
+  "sp" : 375px,
+  "tab": 600px,
+  "pc" : 1025px,
+  );
+/********************/
 
-@mixin media($breakpoint) {
-  @media #{map-get($breakpoints, $breakpoint)}{
+// スマホ基準(〜以上)
+@mixin mq($breakpoint: md) {
+  @media screen and ( min-width: #{ map-get( $breakpoints, $breakpoint ) } ) {
     @content;
   }
 }

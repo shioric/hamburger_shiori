@@ -1,0 +1,18 @@
+$font-Roboto: 'Roboto', sans-serif;
+$font-M1: 'M PLUS 1p', sans-serif;
+
+// フォントサイズ
+@mixin fsz($fontsize, $lin) {
+  font-size: #{$fontsize / 10}rem;
+  line-height: $lin / $fontsize;
+}
+
+
+// letter-spacing
+@mixin l_spacing($spacing) {
+	letter-spacing: ($spacing / 1000 ) + em;
+}
+// 呼び出し例
+// .class {
+// 	@include l_spacing(200);
+// }

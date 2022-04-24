@@ -1,205 +1,289 @@
 @charset "UTF-8";
+/********************/
+/* Box sizing rules */
+/* Box sizingの定義 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default padding */
+/* デフォルトのpaddingを削除 */
+ul[class],
+ol[class] {
+  padding: 0;
+}
+
+/* Remove default margin */
+/* デフォルトのmarginを削除 */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Set core body defaults */
+/* bodyのデフォルトを定義 */
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+/* class属性を持つul、ol要素のリストスタイルを削除 */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+/* classを持たない要素はデフォルトのスタイルを取得 */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+/* img要素の扱いを簡単にする */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+/* article要素内の要素に自然な流れとリズムを定義 */
+article > * + * {
+  margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+/* inputやbuttonなどのフォントは継承を定義 */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+/* 見たくない人用に、すべてのアニメーションとトランジションを削除 */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
 html {
   font-size: 62.5%;
 }
 
-ul {
-  list-style: none;
-}
-
-a {
-  text-decoration: none;
-}
-
 body {
-  overflow: hidden;
-}
-
-.l-container {
-  display: grid;
+  font-size: 1.6rem;
+  font-weight: 400;
+  overflow-x: hidden;
 }
 
 @media screen and (min-width: 1025px) {
-  .l-footer {
-    grid-row: 3/4;
-    grid-column: 1/3;
+  .l-container {
+    display: grid;
+    grid-template-columns: 1fr 19%;
+    grid-template-rows: 1fr 150px;
   }
 }
 
 .l-header {
+  display: flex;
   width: 100%;
   height: 217px;
-  background-color: #FFF7EF;
-  display: flex;
+  padding: 40px 0;
   align-items: center;
+  background-color: #FFF7EF;
+  position: relative;
+  grid-column: 1/2;
+}
+@media screen and (min-width: 600px) {
+  .l-header {
+    min-width: 600px;
+  }
 }
 @media screen and (min-width: 1025px) {
   .l-header {
-    grid-row: 1/2;
-    grid-column: 1/2;
+    text-align: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+.l-header__inner {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+@media screen and (min-width: 1025px) {
+  .l-header__inner {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 }
-
-@media screen and (min-width: 1025px) {
-  .l-main {
-    grid-row: 2/3;
-    grid-column: 1/2;
-  }
-}
-
-@media screen and (min-width: 1025px) {
-  .l-sidebar {
-    grid-column: 2/3;
-    grid-column: 1/3;
-  }
-}
-
-.c-bg {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-}
-.c-bg--white {
-  background-color: rgba(255, 255, 255, 0.8);
-}
-
-.c-form__input {
-  border: 1px solid #707070;
-  /* 枠線 */
-  border-radius: 10px;
-  /* 角丸 */
-}
-.c-form__button {
-  border: 1px solid #707070;
-  /* 枠線 */
-  border-radius: 10px;
-  /* 角丸 */
-}
-
-@media screen and (min-width: 1025px) {
-  .c-grid {
-    grid-template-columns: 1fr 19%;
-    grid-template-rows: 217px 1fr 150px;
-  }
-}
-
-.c-text__title--ja {
-  font-family: "M PLUS 1p", sans-serif;
-}
-.c-text__title--en {
-  font-family: "Roboto", sans-serif;
-}
-
-.c-title__main {
-  font-family: "Roboto", sans-serif;
-  font-size: 2.5rem;
+.l-header__title {
   font-weight: bold;
-  color: #707070;
-}
-.c-title__sub {
   font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
-  font-weight: bold;
   color: #707070;
+  margin-bottom: 38px;
+  font-size: 4rem;
+  line-height: 1.325;
 }
-
-.p-access {
-  width: 100%;
-  background-image: url("../../../img/map.jpg");
-  background-position: 0 0;
+@media screen and (min-width: 1025px) {
+  .l-header__title {
+    font-size: 6.4rem;
+    line-height: 1.3125;
+    margin-bottom: 0;
+    margin-left: 54px;
+  }
 }
-.p-access__map-layer {
-  background-color: rgba(0, 0, 0, 0.3);
-}
-
-.p-guide {
-  width: 100%;
-}
-.p-guide__ul {
-  color: #3C2A10;
-  flex-direction: column;
-  align-items: center;
-}
-.p-guide__li {
+.l-header__search {
+  display: inline-block;
+  /* なくても大丈夫だけど、念の為 */
   position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 89%;
-  background-position: top center;
-  background-repeat: no-repeat;
+  /* 基準値とする */
+}
+@media screen and (min-width: 1025px) {
+  .l-header__search {
+    position: absolute;
+    top: 86px;
+    right: 31px;
+  }
+}
+.l-header__search::before {
+  content: "";
+  /* 疑似要素に必須 */
+  width: 24px;
+  /* アイコンの横幅 */
+  height: 24px;
+  /* アイコンの高さ */
+  background: url(../../img/search-icon.png) no-repeat center center/auto 100%;
+  /* 背景にアイコン画像を配置 */
+  display: inline-block;
+  /* 高さを持たせるためにインラインブロック要素にする */
+  position: absolute;
+  /* 相対位置に指定 */
+  left: 16px;
+  /* アイコンの位置 */
+  transform: translateY(-50%);
+  top: 50%;
+}
+.l-header__search__input {
+  width: 230px;
+  height: 46px;
+  padding: 11px auto 11px 16px;
+  margin-right: 13px;
+  border: 1px solid #707070;
+  border-radius: 10px;
 }
 @media screen and (min-width: 600px) {
-  .p-guide__li {
-    width: 43%;
+  .l-header__search__input {
+    width: 396px;
+  }
+}
+.l-header__search__submit {
+  width: 78px;
+  height: 46px;
+  padding: 12px 23px;
+  background: linear-gradient(to bottom, #F2EDE9, #ded8d3);
+  border: 1px solid #707070;
+  border-radius: 10px;
+  color: #707070;
+  font-weight: bold;
+  font-family: "M PLUS 1p", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4375;
+}
+@media screen and (min-width: 600px) {
+  .l-header__search__submit {
+    width: 136px;
+  }
+}
+.l-header__menu {
+  position: absolute;
+  top: 14px;
+  right: 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #707070;
+  cursor: pointer;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+  font-size: 2rem;
+  line-height: 1.3;
+}
+@media screen and (min-width: 600px) {
+  .l-header__menu {
+    font-size: 3.4rem;
+    line-height: 1.3235294118;
+  }
+}
+@media screen and (min-width: 600px) {
+  .l-header__menu {
+    top: 18px;
+    right: 26px;
   }
 }
 @media screen and (min-width: 1025px) {
-  .p-guide__li {
-    width: 40%;
+  .l-header__menu {
+    display: none;
   }
 }
-.p-guide__li:first-child {
-  background-image: url(../../img/takeout-sp.jpg);
-}
-.p-guide__li:nth-child(2) {
-  background-image: url(../../../img/eatin-sp.jpg);
-}
-.p-guide__title {
-  color: #EAEAEA;
-  font-size: 41px;
-  margin-top: 11px;
-  margin-left: 10px;
-}
-.p-guide__line {
-  margin-left: 3.5%;
-}
-.p-guide__link {
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-.p-guide__dt {
-  font-family: "M PLUS 1p", sans-serif;
-  font-weight: bold;
-  font-size: 22px;
-}
-.p-guide__dd {
-  font-size: 16px;
+.l-header__menu.active {
+  display: none;
 }
 
-.p-mainvisual {
-  width: 100%;
+.l-main__keyVisual {
   height: 285px;
-  background-image: url(../../../img/mainvisual/mainvisual-sp.jpg);
+  width: 100%;
+  min-width: 375px;
+  background-image: url(../../img/keyVisual-sp.jpg);
+  background-size: cover;
+  background-position: center;
   display: flex;
   align-items: center;
-}
-@media screen and (min-width: 600px) {
-  .p-mainvisual {
-    height: 285px;
-  }
-}
-.p-mainvisual__title {
-  color: #FFFFFF;
-  font-size: 2.25rem;
-  padding-left: 35px;
+  position: relative;
 }
 @media screen and (min-width: 1025px) {
-  .p-mainvisual__title {
-    font-size: 2.5rem;
-    padding-left: 86px;
+  .l-main__keyVisual {
+    height: 530px;
   }
 }
-
-.p-search-form {
-  width: 85%;
-  height: 21%;
-  display: flex;
+.l-main__keyVisual__title {
+  color: #FFFFFF;
+  font-family: "M PLUS 1p", sans-serif;
+  font-weight: bold;
+  position: absolute;
+  left: 25px;
+  font-size: 3.6rem;
+  line-height: 1.5;
+}
+@media screen and (min-width: 1025px) {
+  .l-main__keyVisual__title {
+    font-size: 4rem;
+    line-height: 1.5;
+  }
 }
 
 /*================================
@@ -219,12 +303,6 @@ body {
 =================================*/
 /*================================
 	Utility
-=================================*/
-/*================================
-	ヘッダーの設定
-=================================*/
-/*================================
-	ヘッダーの設定
 =================================*/
 
 /*# sourceMappingURL=style.css.map */

@@ -1,11 +1,11 @@
 @use "../../Foundation/mixin" as m;
 
-.c-grid {
-  @include m.media( pc ) {
-    grid-template-columns: 1fr 19%;
-    grid-template-rows: 217px 1fr 150px;
-  }
-}
+// .c-grid {
+//   @include m.media( pc ) {
+//     grid-template-columns: 1fr 19%;
+//     grid-template-rows: 217px 1fr 150px;
+//   }
+// }
 
 // .l-container {
 //   display: flex;

@@ -1,16 +1,31 @@
 @use "../../Foundation/variable" as v;
 
-.c-title {
-  &__main {
-    font-family: v.$font-Roboto;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: v.$font-color--gray;
-    }
-  &__sub {
-    font-family: v.$font-Roboto;
-    font-size: 1.25rem;
-    font-weight: bold;
-    color: v.$font-color--gray;
-  }
-}
+// .c-title {
+//   color: v.$font-color--gray;
+// }
+
+// .c-title--underline {
+//   color: v.$font-color--gray;
+//   &::after {
+//     content: "";
+//     display: block;
+//     background-color: v.$bg-color--contents01;
+//     position: absolute;
+//     width: 34px;
+//   }
+// }
+
+// .c-title {
+//   &__main {
+//     font-family: v.$font-Roboto;
+//     font-size: 4rem;
+//     font-weight: bold;
+//     color: v.$font-color--gray;
+//     }
+//   &__sub {
+//     font-family: v.$font-Roboto;
+//     font-size: 1.25rem;
+//     font-weight: bold;
+//     color: v.$font-color--gray;
+//   }
+// }

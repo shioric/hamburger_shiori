@@ -1,11 +1,11 @@
-@use "../../Foundation/variable" as v;
-@use "../../Foundation/mixin" as m;
+// @use "../../Foundation/variable" as v;
+// @use "../../Foundation/mixin" as m;
 
-.p-access {
-  width: 100%;
-  background-image: url("../../../img/map.jpg");
-  background-position: 0 0;
-  &__map-layer {
-    background-color: rgba( 0, 0, 0, 0.3);
-  }
-}
+// .p-access {
+//   width: 100%;
+//   background-image: url("../../img/map.jpg");
+//   background-position: 0 0;
+//   &__map-layer {
+//     background-color: rgba( 0, 0, 0, 0.3);
+//   }
+// }

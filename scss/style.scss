@@ -1,16 +1,19 @@
 /*================================
 	Foundation
 =================================*/
-@use "Foundation/base";
+@use "Foundation/font";
+@use "Foundation/color";
+@use "Foundation/variable";
+@use "Foundation/function";
 @use "Foundation/mixin";
 @use "Foundation/reset";
-@use "Foundation/variable";
+@use "Foundation/base";
 
 /*================================
 	Layout
 =================================*/
-@use "Layout/container";
 @use "Layout/footer";
+@use "Layout/container";
 @use "Layout/header";
 @use "Layout/main";
 @use "Layout/sidebar";
@@ -23,8 +26,8 @@
 =================================*/
 @use "Object/Component/bg";
 @use "Object/Component/button";
-@use "Object/Component/form";
 @use "Object/Component/grid";
+@use "Object/Component/input";
 @use "Object/Component/text";
 @use "Object/Component/title";
 
@@ -32,17 +35,13 @@
 	Project
 =================================*/
 @use "Object/Project/access";
+@use "Object/Project/branch-menu";
 @use "Object/Project/contents";
-@use "Object/Project/guide";
+@use "Object/Project/form";
+// @use "Object/Project/header";
 @use "Object/Project/mainvisual";
 @use "Object/Project/menu-button";
 @use "Object/Project/search-form";
 /*================================
 	Utility
-=================================*/
-/*================================
-	ヘッダーの設定
-=================================*/
-/*================================
-	ヘッダーの設定
 =================================*/

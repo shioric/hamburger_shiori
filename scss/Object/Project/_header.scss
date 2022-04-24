@@ -1,0 +1,60 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/variable" as v;
+
+.p-header {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__title {
+    color: v.$brown;
+    font-family: v.$font-Roboto;
+    font-size: 40px;
+    line-height: 53px;
+    font-weight: bold;
+    margin-bottom: 38px;
+    text-decoration: none;
+
+    @include m.mq(pc) {
+      margin: 0 40px 0 0;
+      position: absolute;
+      top: 56px;
+      left: 65px;
+      font-size: 64px;
+      line-height: 84px;
+    }
+  }
+
+  &__menuToggle {
+    position: absolute;
+    top: 14px;
+    right: 16px;
+
+    @include m.mq(tab) {
+      top: 18px;
+      right: 26px;
+    }
+    @include m.mq(pc) {
+      display: none;
+    }
+    button {
+      appearance: none;
+      padding: 0;
+      border: none;
+      outline: none;
+      background: transparent;
+      color: v.$brown;
+      font-family: v.$font-Roboto;
+      cursor: pointer;
+      font-size: 20px;
+      font-weight: bold;
+      line-height: 26px;
+      @include m.mq(tab) {
+        font-size: 34px;
+        line-height: 45px;
+      }
+    }
+  }
+}
