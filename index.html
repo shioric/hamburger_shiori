@@ -21,128 +21,120 @@
 </head>
 
 <body>
+  <!-- <div class="l-container"></div> -->
   <!-- ヘッダー -->
   <header class="l-header">
-    <div class="l-header__inner">
-      <h1 class="l-header__title">Hamburger</h1>
-
-      <form class="l-header__search" method="get" action="#">
-        <input type="text" class="l-header__search__input">
-        <input type="submit" class="l-header__search__submit" value="検索">
-      </form>
-    </div><!-- /inner -->
-
-    <button class="l-header__menu">Menu</button>
-
-  </header><!-- /header -->
+  <div class="l-header__inner">
+    <h1 class="l-header__title">Hamburger</h1>
+    <form class="p-form" method="get" action="#">
+      <input type="text" class="p-form__input">
+      <input type="submit" class="p-form__submit" value="検索">
+    </form>
+  </div> <!-- /inner -->
+  <button class="l-header__menu">Menu</button>
+  </header> <!-- /header -->
 
   <!-- メインコンテンツエリア -->
-  <main class="l-main">
+  <main class="l-main__wrapper">
+    <article class="p-main">
+      <!-- keyVisual -->
+      <section class="p-keyVisual">
+        <h2 class="p-keyVisual__title">ダミーサイト</h2>
+      </section> <!-- /keyVisual -->
 
-    <!-- keyVisual -->
-    <section class="l-main__keyVisual">
-      <h2 class="l-main__keyVisual__title">ダミーサイト</h2>
-    </section>
-
-    <!-- service -->
-    <section class="l-main__service">
-      <div class="l-main__">
-          <div class="service__cat">
-            <div class="service__takeOut">
-              <h2 class="service__head">Take Out</h2>
-              <div class="service__body">
-                <div class="service__box">
-                  <p class="service__title">Take Out</p>
-                  <p class="service__text">当店のテイクアウトで利用できる商品を掲載しています</p>
+      <!-- service -->
+      <section class="p-service">
+        <div class="p-service c-container">
+          <div class="p-service__menu--takeout">
+            <!-- TakeOutここから -->
+            <a href="#" class="p-service__inner">
+              <h2 class="p-service__top">Take Out</h2>
+              <div class="p-service__bottom">
+                <div class="p-service__box">
+                  <p class="p-service__title">Take Out</p>
+                  <p class="p-service__text">当店のテイクアウトで利用できる商品を掲載しています</p>
                 </div>
-                <div class="service__box">
-                  <p class="service__title">Take Out</p>
-                  <p class="service__text">当店のテイクアウトで利用できる商品を掲載しています</p>
+                <div class="p-service__box">
+                  <p class="p-service__title">Take Out</p>
+                  <p class="p-service__text">当店のテイクアウトで利用できる商品を掲載しています</p>
                 </div>
               </div>
-            </div>
-            <div class="service__eatIn">
-              <h2 class="service__head">Take Out</h2>
-              <div class="service__body">
-                <div class="service__box">
-                  <p class="service__title">Take Out</p>
-                  <p class="service__text">当店のテイクアウトで利用できる商品を掲載しています</p>
+            </a>
+          </div><!-- TakeOutここまで -->
+          <div class="p-service__menu--eatin">
+            <!-- EatInここから -->
+            <a href="#" class="p-service__inner">
+              <h2 class="p-service__top">Eat In</h2>
+              <div class="p-service__bottom">
+                <div class="p-service__box">
+                  <p class="p-service__title">Eat In</p>
+                  <p class="p-service__text">当店のイートインで利用できる商品を掲載しています</p>
                 </div>
-                <div class="service__box">
-                  <p class="service__title">Take Out</p>
-                  <p class="service__text">当店のテイクアウトで利用できる商品を掲載しています</p>
+                <div class="p-service__box">
+                  <p class="p-service__title">Eat In</p>
+                  <p class="p-service__text">当店のイートインで利用できる商品を掲載しています</p>
                 </div>
               </div>
-            </div>
-          </div>
+            </a>
+          </div><!-- EatInここまで -->
         </div>
       </section>
+    </article>
 
-      <!-- access -->
-      <section class="access mainContent__cat">
-        <div class="access__inner">
-          <div class="access__cont">
-            <h2 class="access__title">見出しが入ります</h2>
-            <p class="access__text">
-              テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
-            </p>
-          </div>
+    <!-- access -->
+    <section class="p-access"><!-- 黒背景(下から①) -->
+      <div class="p-access__inner"><!-- map(下から②) -->
+        <div class="p-access__contents"><!-- グレー背景(下から③) -->
+          <h2 class="p-access__title">見出しが入ります</h2>
+          <p class="p-access__text">
+            テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。
+          </p>
         </div>
-      </section>
+      </div>
     </section>
   </main>
 
-  <!-- メニュー -->
-  <div class="l-menu">
-    <div class="l-menu__bg"></div>
-    <nav class="l-menu__inner">
-    <div class="l-menu__close">
+  <!-- サイドバー -->
+  <aside class="l-sidebar">
+    <h2 class="l-sidebar__title">Menu</h2>
+    <div class="l-sidebar__close">
       <span></span>
       <span></span>
     </div>
-    <p class="l-menu__title">Menu</p>
-    <ul class="l-menu__list">
-      <li>
-        バーガー
-        <ul class="l-menu__subList">
-          <li><a href="#">ハンバーガー</a></li>
-          <li><a href="#">チーズバーガー</a></li>
-          <li><a href="#">テリヤキバーガー</a></li>
-          <li><a href="#">アボカドバーガー</a></li>
-          <li><a href="#">フィッシュバーガー</a></li>
-          <li><a href="#">ベーコンバーガー</a></li>
-          <li><a href="#">チキンバーガー</a></li>
-        </ul>
-      </li>
-      <li>
-        サイド
-        <ul class="l-menu__subList">
-          <li><a href="#">ポテト</a></li>
-          <li><a href="#">サラダ</a></li>
-          <li><a href="#">ナゲット</a></li>
-          <li><a href="#">コーン</a></li>
-        </ul>
-      </li>
-      <li>
-        ドリンク
-        <ul class="l-menu__subList">
-          <li><a href="#">コーラ</a></li>
-          <li><a href="#">ファンタ</a></li>
-          <li><a href="#">オレンジ</a></li>
-          <li><a href="#">アップル</a></li>
-          <li><a href="#">紅茶（Ice/Hot）</a></li>
-          <li><a href="#">コーヒー（Ice/Hot）</a></li>
-        </ul>
-      </li>
+    <h3 class="l-sidebar__list--title">バーガー</h3>
+    <ul class="l-sidebar__list">
+      <li><a href="#">ハンバーガー</a></li>
+      <li><a href="#">チーズバーガー</a></li>
+      <li><a href="#">テリヤキバーガー</a></li>
+      <li><a href="#">アボカドバーガー</a></li>
+      <li><a href="#">フィッシュバーガー</a></li>
+      <li><a href="#">ベーコンバーガー</a></li>
+      <li><a href="#">チキンバーガー</a></li>
     </ul>
-  </nav>
-</div>
-
+    <h3 class="l-sidebar__list--title">サイド</h3>
+    <ul class="l-sidebar__list">
+      <li><a href="#">ポテト</a></li>
+      <li><a href="#">サラダ</a></li>
+      <li><a href="#">ナゲット</a></li>
+      <li><a href="#">コーン</a></li>
+    </ul>
+    <h3 class="l-sidebar__list--title">ドリンク</h3>
+    <ul class="l-sidebar__list">
+      <li><a href="#">コーラ</a></li>
+      <li><a href="#">ファンタ</a></li>
+      <li><a href="#">オレンジ</a></li>
+      <li><a href="#">アップル</a></li>
+      <li><a href="#">紅茶（Ice/Hot）</a></li>
+      <li><a href="#">コーヒー（Ice/Hot）</a></li>
+    </ul>
+  </aside>
+  
   <!-- フッター -->
   <footer class="l-footer">
-    <ul class="l-footer__likList">
-      <li><a href="#">ショップ情報</a></li>
-      <li><a href="#">ヒストリー</a></li>
+    <ul class="l-footer__ul">
+      <li class="l-footer__li"><a href="#">ショップ情報</a></li>
+      <span class="l-footer__ul--partition c-partition"></span>
+      <li class="l-footer__li"><a href="#">ヒストリー</a></li>
     </ul>
     <div class="l-footer__copy">Copyright: RaiseTech</div>
   </footer>

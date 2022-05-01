@@ -2,30 +2,11 @@
 @use "../Foundation/color" as c;
 @use "../Foundation/font" as f;
 
-.l-main__keyVisual {
-  height: 285px;
+.l-main__wrapper {
   width: 100%;
-  min-width: 375px;
-  background-image: url(../../img/keyVisual-sp.jpg);
-  background-size: cover;
-  background-position: center;
-  display: flex;
-  align-items: center;
-  position: relative;
+  background-color: c.$c-main;
 
   @include m.mq(pc) {
-    height: 530px;
-  }
-
-  &__title {
-    color: c.$c-accent;
-    font-family: f.$font-M1;
-    font-weight: bold;
-    position: absolute;
-    left: 25px;
-    @include f.fsz(36, 54);
-    @include m.mq(pc) {
-      @include f.fsz(40, 60);
-    }
+    grid-column: 1/2;
   }
 }

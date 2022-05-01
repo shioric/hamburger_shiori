@@ -1,0 +1,9 @@
+@use "../../Foundation/color" as c;
+
+.c-partition {
+  width: 1px;
+  height: 20px;
+  background-color: c.$c-accent;
+  display: block;
+  margin: 18px;
+}

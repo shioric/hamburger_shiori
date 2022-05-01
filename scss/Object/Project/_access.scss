@@ -1,11 +1,85 @@
-// @use "../../Foundation/variable" as v;
-// @use "../../Foundation/mixin" as m;
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
 
-// .p-access {
-//   width: 100%;
-//   background-image: url("../../img/map.jpg");
-//   background-position: 0 0;
-//   &__map-layer {
-//     background-color: rgba( 0, 0, 0, 0.3);
-//   }
-// }
+.p-access {
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+
+  &__inner {
+    width: 100%;
+    height: 100%;
+    background: url(../../../img/map-sp.png) center no-repeat;
+    background-size: cover;
+
+    @include m.mq(tab) {
+      background: url(../../../img/map-tab.png);
+    }
+    @include m.mq(pc) {
+      background: url(../../../img/map-pc.png);
+    }
+  }
+
+  &__contents {
+    position: relative;
+    color: c.$c-accent;
+    z-index: 1;
+    // padding: 40px 40px 51px 40px;
+
+    @include m.mq(pc) {
+      width: 61%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background-color: rgba(0, 0, 0, 0.29);
+      z-index: -1;
+
+      @include m.mq(tab) {
+        height: 100%;
+      }
+    }
+  }
+
+  &__title {
+    padding-top:40px;
+    padding-left: 42px;
+    font-weight: bold;
+    font-family: f.$font-M1;
+    @include f.fsz(30,45);
+
+    @include m.mq(pc) {
+      @include f.fsz(36,54);
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 75px;
+      height: 2px;
+      margin-top: 20px;
+      background-color: c.$c-accent;
+
+      @include m.mq(pc) {
+        margin-top: 55.5px;
+      }
+    }
+  }
+
+  &__text {
+    padding: 40px 40px 51px 40px;
+    font-weight: bold;
+    font-family: f.$font-M1;
+    @include f.fsz(14,33);
+
+    @include m.mq(pc) {
+      @include f.fsz(16,33);
+    }
+  }
+}

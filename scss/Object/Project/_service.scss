@@ -1,0 +1,172 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-service {
+  @include m.mq(tab) {
+    display: flex;
+  }
+
+  &__menu {
+    justify-content: flex-end;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px 0 0 0;
+    width: 100%;
+    min-height: 642px;
+
+    @include m.mq(tab) {
+      min-height: 681px;
+      width: calc(100% / 2);
+      margin: 40px 0 0 40px;
+    }
+    @include m.mq(pc) {
+      min-height: 1193px;
+      width: calc(100% / 2);
+      margin: 120px 0 0 134px;
+    }
+
+    &--takeout {
+      background-image: url(../../../img/takeout-pc.jpg);
+      margin-bottom: 20px;
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+
+      @include m.mq(tab) {
+        margin-right: 40px;
+        margin-bottom: 0;
+      }
+
+      @include m.mq(pc) {
+        margin-right: 80px;
+      }
+    }
+
+    &--eatin {
+      background-image: url(../../../img/eatin-pc.jpg);
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    min-height: 642px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-decoration: none;
+
+    @include m.mq(tab) {
+      min-height: 100%;
+    }
+  }
+
+  &__top {
+    display: block;
+    color: #EAEAEA;
+    font-weight: bold;
+    padding-top: 12px;
+    padding-left: 11px;
+    @include f.fsz(41, 54);
+
+    @include m.mq(tab) {
+      @include f.fsz(44, 58);
+      padding-top: 13px;
+      padding-left: 12px;
+    }
+
+    @include m.mq(pc) {
+      @include f.fsz(80,106);
+      padding-top: 22px;
+      padding-left: 20px;
+    }
+
+    &::after {
+      content: '';
+      display: block;
+      width: 33.89px;
+      height: 4px;
+      margin-top: 19.3px;
+      background-color: c.$c-accent;
+
+      @include m.mq(tab) {
+        width: 36px;
+        margin-top: 20px;
+      }
+
+      @include m.mq(pc) {
+        width: 63px;
+        margin-top: 32px;
+      }
+    }
+  }
+
+  &__bottom {
+    @include m.mq(tab) {
+      padding-top: 46%;
+    }
+
+    @include m.mq(pc) {
+      padding-top: 67.5%;
+    }
+  }
+  &__box {
+    width: auto;
+    min-height: 163px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    font-family: f.$font-M1;
+    font-weight: bold;
+    color: c.$c-primary;
+    margin: 0 10px 10px 10px;
+
+    @include m.mq(tab) {
+      min-height: 172px;
+    }
+
+    @include m.mq(pc) {
+      min-height: 174px;
+      margin: 0 20px 20px 20px;
+    }
+  }
+
+  &__title {
+    @include f.fsz(22,33);
+    padding-top: 19px;
+    padding-left: 10px;
+    padding-bottom: 19px;
+
+    @include m.mq(tab) {
+      @include f.fsz(24,36);
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 11px;
+    }
+
+    @include m.mq(pc) {
+      padding-top: 17px;
+      padding-bottom: 26px;
+      padding-left:10px;
+    }
+  }
+
+  &__text {
+    @include f.fsz(16,23);
+    font-weight: normal;
+    padding: 0 14px 23px 10px;
+
+    @include m.mq(tab) {
+      padding: 0 15px 22px 11px;
+    }
+
+    @include m.mq(pc) {
+      padding: 0 25px 0 19px;
+    }
+  }
+
+}

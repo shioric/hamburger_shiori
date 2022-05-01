@@ -13,7 +13,7 @@
 	Layout
 =================================*/
 @use "Layout/footer";
-@use "Layout/container";
+@use "Layout/l-container";
 @use "Layout/header";
 @use "Layout/main";
 @use "Layout/sidebar";
@@ -26,8 +26,10 @@
 =================================*/
 @use "Object/Component/bg";
 @use "Object/Component/button";
+@use "Object/Component/c-container";
 @use "Object/Component/grid";
 @use "Object/Component/input";
+@use "Object/Component/partition";
 @use "Object/Component/text";
 @use "Object/Component/title";
 
@@ -35,13 +37,14 @@
 	Project
 =================================*/
 @use "Object/Project/access";
-@use "Object/Project/branch-menu";
+// @use "Object/Project/branch-menu";
 @use "Object/Project/contents";
 @use "Object/Project/form";
 // @use "Object/Project/header";
-@use "Object/Project/mainvisual";
+@use "Object/Project/keyVisual";
 @use "Object/Project/menu-button";
-@use "Object/Project/search-form";
+// @use "Object/Project/search-form";
+@use "Object/Project/service";
 /*================================
 	Utility
 =================================*/

@@ -1,0 +1,17 @@
+@use "../../Foundation/mixin"as m;
+
+.c-container {
+  width: calc(100% - 40px);
+  margin: 0 auto;
+
+  @include m.mq(tab) {
+    width: calc(100% - 80px);
+  }
+
+  @include m.mq(pc) {
+    width: calc(100% - 220px);
+  }
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
