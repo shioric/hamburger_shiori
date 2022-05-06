@@ -1,0 +1,70 @@
+@use "../../Foundation/mixin"as m;
+@use "../../Foundation/color"as c;
+@use "../../Foundation/font"as f;
+
+.p-sidebar {
+  position: absolute;
+  top: 0;
+  right: -120%;
+  z-index: 9999;
+  transition: all 0.3s;
+  overflow: auto;
+  width: 328px;
+  height: 100vh;
+  padding-top: 212px;
+  padding-left: 46px;
+  padding-bottom: 100%;
+  &.active {
+    right: 0;
+    position: absolute;
+  }
+  @include m.mq(tab) {
+    width: 367px;
+  }
+  @include m.mq(pc) {
+    display: block;
+    width: auto;
+    height: auto;
+    position: inherit;
+    transition: inherit;
+    overflow: inherit;
+    z-index: inherit;
+    padding-top: 0;
+    // padding-left: 10%;
+    // padding-bottom: auto;
+  }
+
+  &__menu {
+    display: none;
+    @include m.mq(pc) {
+      display: block;
+      margin-top: 82px;
+      margin-bottom: 85px;
+      font-family: f.$font-Roboto;
+      font-weight: bold;
+      @include f.fsz(34, 45);
+    }
+  }
+
+  &__unit {
+    font-weight: bold;
+    font-family: f.$font-M1;
+    margin-bottom: 40px;
+    @include f.fsz(24,36);
+    }
+
+  &__list {
+    list-style: none;
+    font-weight: normal;
+    font-family: f.$font-M1;
+    @include f.fsz(20,29);
+  }
+
+  li {
+    margin-left: 20px;
+    margin-bottom: 23px;
+    &:last-child {
+      margin-bottom: 40px;
+    }
+  }
+}

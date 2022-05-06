@@ -13,9 +13,9 @@
   position: relative;
   grid-column: 1/2;
 
-  @include m.mq(tab) {
-    min-width: 600px;
-  }
+  // @include m.mq(tab) {
+  //   min-width: 600px;
+  // }
 
   @include m.mq(pc) {
     text-align: inherit;
@@ -46,7 +46,7 @@
     @include m.mq(pc) {
       @include f.fsz(64, 84);
       margin-bottom: 0;
-      margin-left: 54px;
+      margin-left: 4%;
     }
   }
 

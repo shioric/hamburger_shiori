@@ -3,42 +3,11 @@
 @use "../Foundation/font" as f;
 
 .l-sidebar {
-  display: block;
-  color: c.$c-base;
   background-color: c.$c-secondary;
-  width: 328px;
-  height: 100vh;
-  padding-top: 212px;
-  padding-left: 46px;
-  padding-bottom: 100%;
-  position: fixed;
-  top: 0;
-  right: -120%;
-  transition: all 0.3s;
-  z-index: 9999;
-  overflow: auto;
-
-  &.active {
-    right: 0;
-    position: absolute;
-  }
-
-  @include m.mq(tab) {
-    width: 367px;
-  }
+  color: c.$c-base;
 
   @include m.mq(pc) {
-    padding-top: 0;
-    // padding-left: 10%;
-    padding-bottom: auto;
-    height: auto;
-    display: block;
-    position: static;
+    grid-row: 1/2;
     grid-column: 2/3;
-    grid-row: 1/3;
-    width: auto;
-    transition: inherit;
-    overflow: inherit;
-    z-index: inherit;
   }
 }

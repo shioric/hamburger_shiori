@@ -1,0 +1,8 @@
+@use "../Foundation/mixin" as m;
+
+.l-contents {
+  @include m.mq(pc) {
+    grid-row:  1/2;
+    grid-column: 1/2;
+  }
+}

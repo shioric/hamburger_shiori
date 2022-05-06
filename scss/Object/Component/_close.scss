@@ -1,0 +1,36 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+
+.c-close {
+  z-index: 100;
+  right: 5%;
+  top: 5%;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  cursor: pointer;
+  border: none;
+  @include m.mq(pc) {
+    display: none;
+  }
+
+  &--line1 {
+    display: inline-block;
+    font-size: 0;
+    background-color: c.$c-base;
+    width: 40px;
+    height: 5px;
+    transform: translateY(2px) rotate(-45deg);
+  }
+
+  &--line2 {
+    display: inline-block;
+    font-size: 0;
+    background-color: c.$c-base;
+    width: 40px;
+    height: 5px;
+    transform: translateY(-22px) rotate(45deg);
+  }
+}
