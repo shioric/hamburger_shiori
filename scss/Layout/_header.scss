@@ -12,11 +12,9 @@
   background-color: #FFF7EF;
   position: relative;
   grid-column: 1/2;
-
   // @include m.mq(tab) {
   //   min-width: 600px;
   // }
-
   @include m.mq(pc) {
     text-align: inherit;
     display: flex;
@@ -28,7 +26,6 @@
     width: 100%;
     margin: 0 auto;
     text-align: center;
-
     @include m.mq(pc) {
       display: flex;
       align-items: center;
@@ -42,69 +39,12 @@
     color: c.$c-base;
     margin-bottom: 38px;
     @include f.fsz(40, 53);
-
     @include m.mq(pc) {
-      @include f.fsz(64, 84);
+      font-size: 3.3vw;
       margin-bottom: 0;
-      margin-left: 4%;
+      margin-left: 65px;
     }
   }
-
-  // &__search {
-  //   display: inline-block;  /* なくても大丈夫だけど、念の為 */
-  //   position: relative;
-
-  //   @include m.mq(pc) {
-  //     position: absolute;
-  //     top: 86px;
-  //     right: 31px;
-  //   }
-
-  //   /* 基準値とする */
-  //   &::before {
-  //     content: "";  /* 疑似要素に必須 */
-  //     width: 24px;  /* アイコンの横幅 */
-  //     height: 24px;  /* アイコンの高さ */
-  //     background: url(../../img/search-icon.png) no-repeat center center / auto 100%;  /* 背景にアイコン画像を配置 */
-  //     display: inline-block;  /* 高さを持たせるためにインラインブロック要素にする */
-  //     position: absolute;  /* 相対位置に指定 */
-  //     left: 16px;  /* アイコンの位置 */
-  //     transform: translateY(-50%);
-  //     top: 50%;
-  //   }
-
-  //   &__input {
-  //     width: 230px;
-  //     height: 46px;
-  //     padding: 11px auto 11px 16px;
-  //     margin-right: 13px;
-  //     border: 1px solid c.$c-base;
-  //     border-radius: 10px;
-
-  //     @include m.mq(tab) {
-  //       width: 396px;
-  //     }
-  //   }
-
-  //   &__submit {
-  //     width: 78px;
-  //     height: 46px;
-  //     padding: 12px 23px;
-  //     background: linear-gradient(to bottom, c.$c-secondary, #ded8d3);
-  //     border: 1px solid c.$c-base;
-  //     border-radius: 10px;
-  //     color: c.$c-base;
-  //     font-weight: bold;
-  //     font-family: f.$font-M1;
-  //     @include f.fsz(16, 23);
-
-  //     @include m.mq(tab) {
-  //       width: 136px;
-  //     }
-  //   }
-
-
-  // }
 
   &__menu {
     position: absolute;
@@ -118,16 +58,11 @@
     font-weight: bold;
     font-family: f.$font-Roboto;
     @include f.fsz(20, 26);
-
     @include m.mq(tab) {
-      @include f.fsz(34, 45);
-    }
-
-    @include m.mq(tab) {
+      @include f.fsz(34,45);
       top: 18px;
       right: 26px;
     }
-
     @include m.mq(pc) {
       display: none;
     }

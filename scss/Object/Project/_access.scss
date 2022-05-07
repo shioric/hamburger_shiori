@@ -12,7 +12,6 @@
     height: 100%;
     background: url(../../../img/map-sp.png) center no-repeat;
     background-size: cover;
-
     @include m.mq(tab) {
       background: url(../../../img/map-tab.png);
     }
@@ -26,7 +25,6 @@
     color: c.$c-accent;
     z-index: 1;
     // padding: 40px 40px 51px 40px;
-
     @include m.mq(pc) {
       width: 61%;
     }
@@ -40,7 +38,6 @@
       height: 60%;
       background-color: rgba(0, 0, 0, 0.29);
       z-index: -1;
-
       @include m.mq(tab) {
         height: 100%;
       }
@@ -53,9 +50,8 @@
     font-weight: bold;
     font-family: f.$font-M1;
     @include f.fsz(30,45);
-
     @include m.mq(pc) {
-      @include f.fsz(36,54);
+      font-size: 2.3vw;
     }
 
     &::after {
@@ -65,7 +61,6 @@
       height: 2px;
       margin-top: 20px;
       background-color: c.$c-accent;
-
       @include m.mq(pc) {
         margin-top: 55.5px;
       }
@@ -77,9 +72,8 @@
     font-weight: bold;
     font-family: f.$font-M1;
     @include f.fsz(14,33);
-
     @include m.mq(pc) {
-      @include f.fsz(16,33);
+      font-size: 1vw;
     }
   }
 }

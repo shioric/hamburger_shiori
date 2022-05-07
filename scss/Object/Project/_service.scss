@@ -5,6 +5,8 @@
 .p-service {
   @include m.mq(tab) {
     display: flex;
+    // gap: 40px;
+    justify-content: space-between;
   }
 
   &__menu {
@@ -24,6 +26,7 @@
     }
     @include m.mq(pc) {
       min-height: 1193px;
+      // width: 32.5vw;
       width: calc(100% / 2);
       margin: 120px 0 0 134px;
     }
@@ -60,9 +63,11 @@
     flex-direction: column;
     justify-content: space-between;
     text-decoration: none;
-
     @include m.mq(tab) {
       min-height: 100%;
+    }
+    @include m.mq(pc) {
+      width: 32.5vw;
     }
   }
 
@@ -79,9 +84,8 @@
       padding-top: 13px;
       padding-left: 12px;
     }
-
     @include m.mq(pc) {
-      @include f.fsz(80,106);
+      font-size: 4.1vw;
       padding-top: 22px;
       padding-left: 20px;
     }
@@ -110,7 +114,6 @@
     @include m.mq(tab) {
       padding-top: 46%;
     }
-
     @include m.mq(pc) {
       padding-top: 67.5%;
     }
@@ -128,7 +131,6 @@
     @include m.mq(tab) {
       min-height: 172px;
     }
-
     @include m.mq(pc) {
       min-height: 174px;
       margin: 0 20px 20px 20px;
@@ -140,14 +142,12 @@
     padding-top: 19px;
     padding-left: 10px;
     padding-bottom: 19px;
-
     @include m.mq(tab) {
       @include f.fsz(24,36);
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 11px;
     }
-
     @include m.mq(pc) {
       padding-top: 17px;
       padding-bottom: 26px;

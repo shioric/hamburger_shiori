@@ -5,7 +5,6 @@
 .l-sidebar {
   background-color: c.$c-secondary;
   color: c.$c-base;
-
   @include m.mq(pc) {
     grid-row: 1/2;
     grid-column: 2/3;

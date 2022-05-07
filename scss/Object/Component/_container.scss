@@ -1,17 +1,27 @@
 @use "../../Foundation/mixin"as m;
 
 .c-container {
-  width: calc(100% - 40px);
-  margin: 0 auto;
-
+  padding: 20px;
   @include m.mq(tab) {
-    width: calc(100% - 80px);
+    padding: 40px;
   }
-
   @include m.mq(pc) {
-    width: calc(100% - 220px);
-  }
-  > *:last-child {
-    margin-bottom: 0;
+    padding: 80px;
   }
 }
+
+// .c-container {
+//   width: calc(100% - 40px);
+//   margin: 0 auto;
+
+//   @include m.mq(tab) {
+//     width: calc(100% - 80px);
+//   }
+
+//   @include m.mq(pc) {
+//     width: calc(100% - 220px);
+//   }
+//   // > *:last-child {
+//   //   margin-bottom: 0;
+//   // }
+// }

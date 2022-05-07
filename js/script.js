@@ -1,12 +1,12 @@
 $(function () {
   $(".l-header__menu").on("click", function () {
     $(".c-cover").toggleClass("active");
-    $(".p-sidebar").toggleClass("active");
+    $(".l-sidebar").toggleClass("active");
     $("body").css("position", "fixed");
   });
   $(".c-close").on("click", function () {
     $(".c-cover").toggleClass("active");
-    $(".p-sidebar").toggleClass("active");
+    $(".l-sidebar").toggleClass("active");
     $("body").css("position", "");
   });
   $(window).resize(function () {
@@ -14,11 +14,11 @@ $(function () {
     let breakpoint = 1025;
 
     if ($window > breakpoint) {
-      $(".p-sidebar").show();
+      $(".l-sidebar").show();
       $(".c-cover").removeClass("active");
       $("body").css("position", "");
     } else {
-      $(".p-sidebar").removeClass("active");
+      $(".l-sidebar").removeClass("active");
       $(".c-cover").removeClass("active");
       $("body").css("position", "");
     }

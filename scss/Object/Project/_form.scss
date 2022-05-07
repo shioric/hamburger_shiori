@@ -32,9 +32,11 @@
     margin-right: 13px;
     border: 1px solid c.$c-base;
     border-radius: 10px;
-
     @include m.mq(tab) {
       width: 396px;
+    }
+    @include m.mq(pc) {
+      width: 20.6vw;
     }
   }
 
@@ -52,6 +54,9 @@
 
     @include m.mq(tab) {
       width: 136px;
+    }
+    @include m.mq(pc) {
+      width: 7vw;
     }
   }
 }

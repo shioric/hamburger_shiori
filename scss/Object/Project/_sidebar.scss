@@ -3,7 +3,7 @@
 @use "../../Foundation/font"as f;
 
 .p-sidebar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: -120%;
   z-index: 9999;
@@ -14,13 +14,16 @@
   padding-top: 212px;
   padding-left: 46px;
   padding-bottom: 100%;
+
   &.active {
     right: 0;
     position: absolute;
   }
+
   @include m.mq(tab) {
     width: 367px;
   }
+
   @include m.mq(pc) {
     display: block;
     width: auto;
@@ -36,13 +39,15 @@
 
   &__menu {
     display: none;
+
     @include m.mq(pc) {
       display: block;
       margin-top: 82px;
       margin-bottom: 85px;
       font-family: f.$font-Roboto;
       font-weight: bold;
-      @include f.fsz(34, 45);
+      font-size: 1.7vw;
+      // @include f.fsz(34,45);
     }
   }
 
@@ -50,19 +55,28 @@
     font-weight: bold;
     font-family: f.$font-M1;
     margin-bottom: 40px;
-    @include f.fsz(24,36);
+    @include f.fsz(24, 36);
+
+    @include m.mq(pc) {
+      font-size: 1.25vw;
     }
+  }
 
   &__list {
     list-style: none;
     font-weight: normal;
     font-family: f.$font-M1;
-    @include f.fsz(20,29);
+    @include f.fsz(20, 29);
+
+    @include m.mq(pc) {
+      font-size: 1.04vw;
+    }
   }
 
   li {
     margin-left: 20px;
     margin-bottom: 23px;
+
     &:last-child {
       margin-bottom: 40px;
     }
