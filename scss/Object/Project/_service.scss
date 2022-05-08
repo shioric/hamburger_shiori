@@ -18,9 +18,9 @@
     margin: 20px 0 0 0;
     width: 100%;
     min-height: 642px;
-
     @include m.mq(tab) {
       min-height: 681px;
+      // width: calc((100% - 40px) / 2);
       width: calc(100% / 2);
       margin: 40px 0 0 40px;
     }
@@ -37,12 +37,10 @@
       background-size: cover;
       background-position: center center;
       background-repeat: no-repeat;
-
       @include m.mq(tab) {
         margin-right: 40px;
         margin-bottom: 0;
       }
-
       @include m.mq(pc) {
         margin-right: 80px;
       }
@@ -65,6 +63,7 @@
     text-decoration: none;
     @include m.mq(tab) {
       min-height: 100%;
+      width: 42.8vw;
     }
     @include m.mq(pc) {
       width: 32.5vw;

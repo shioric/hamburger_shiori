@@ -1,19 +1,9 @@
-@use "../../Foundation/mixin" as m;
+@use "../../Foundation/mixin"as m;
 
-// .c-grid {
-//   @include m.media( pc ) {
-//     grid-template-columns: 1fr 19%;
-//     grid-template-rows: 217px 1fr 150px;
-//   }
-// }
-
-// .l-container {
-//   display: flex;
-//   justify-content: center; //この指定はspの時は良いがpc版等にした時に邪魔になる
-//   @include m.media( pc ) {
-//     display: grid;
-//     justify-content: initial; //上のjustify-content: center;が邪魔になるので、これを初期値に戻してから、改めてスタイルを指定する
-//     grid-template-columns: 1fr 19%;
-//     grid-template-rows: 217px 1fr 150px;
-//   }
-// }
+.c-grid {
+  @include m.mq(pc) {
+    display: grid;
+    grid-template-columns: 1fr 19%;
+    grid-template-rows: 1fr 150px;
+  }
+}

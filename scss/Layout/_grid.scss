@@ -1,9 +1,0 @@
-@use "../Foundation/mixin"as m;
-
-.l-grid {
-  @include m.mq(pc) {
-    display: grid;
-    grid-template-columns: 1fr 19%;
-    grid-template-rows: 1fr 150px;
-  }
-}

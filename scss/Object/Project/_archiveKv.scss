@@ -1,0 +1,54 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-archiveKv {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-width: 375px;
+  height: 283px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  // background-position: center;
+  background-color: #000000;
+  background-image: url("../../../img/kv-archive-sp.png");
+  @include m.mq(tab) {
+    align-items: center;
+    flex-direction: inherit;
+    background-image: url("../../../img/kv-archive-tab.png");
+  }
+  @include m.mq(pc) {
+    height: 239px;
+    background-image: url("../../../img/kv-archive-pc.png");
+  }
+
+  &__title {
+    color: c.$c-accent;
+    font-family: f.$font-Roboto;
+    font-weight: bold;
+    @include f.fsz(36,48);
+    padding-top: 102px;
+    padding-left: 37px;
+    @include m.mq(tab) {
+      @include f.fsz(60,79);
+      padding: 0 0 0 86px;
+      top: 50%;
+    }
+  }
+
+  &__subtitle {
+    color: c.$c-accent;
+    font-family: f.$font-M1;
+    font-weight: bold;
+    @include f.fsz(16,23);
+    padding-left: 37px;
+    @include m.mq(tab) {
+      top: 137px;
+      padding-left: 20px;
+    }
+    @include m.mq(pc) {
+      top: 113px;
+    }
+  }
+}
