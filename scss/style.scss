@@ -41,6 +41,7 @@
 	Project
 =================================*/
 @use "Object/Project/access";
+@use "Object/Project/archive-desc";
 @use "Object/Project/archiveKv";
 @use "Object/Project/card";
 // @use "Object/Project/branch-menu";
@@ -49,6 +50,7 @@
 // @use "Object/Project/header";
 @use "Object/Project/keyVisual";
 @use "Object/Project/menu-button";
+@use "Object/Project/pagination";
 // @use "Object/Project/search-form";
 @use "Object/Project/service";
 @use "Object/Project/sidebar" as sb;

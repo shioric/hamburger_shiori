@@ -1,0 +1,99 @@
+@use "../../Foundation/mixin"as m;
+@use "../../Foundation/color"as c;
+@use "../../Foundation/font"as f;
+
+.p-card {
+  margin-bottom: 20px;
+
+  @include m.mq(tab) {
+    display: flex;
+  }
+
+  &__image-sp {
+    object-fit: cover;
+    height: auto;
+    width: 100%;
+
+    @include m.mq(tab) {
+      display: none;
+    }
+  }
+
+  &__image-tab {
+    display: none;
+
+    @include m.mq(tab) {
+      display: block;
+      object-fit: cover;
+      height: auto;
+      width: 50%;
+    }
+  }
+
+  &__desc {
+    background-color: c.$c-accent-dark;
+    color: c.$c-accent;
+    font-family: f.$font-M1;
+    min-height: 354px;
+    // margin-top: 0;
+    padding: 31.5px 73px 43.7px 17px;
+    @include m.mq(tab) {
+      width: 50%;
+      height: auto;
+    }
+    @include m.mq(pc) {
+      padding: 53px 34px 60px 63px;
+      height: auto;
+    }
+
+    &--title {
+      font-weight: bold;
+      margin-bottom: 24px;
+      @include f.fsz(20, 29);
+      @include m.mq(pc) {
+        margin-bottom: 47px;
+        font-size: 1.875vw
+      }
+    }
+
+    &--subtitle {
+      font-weight: bold;
+      margin-bottom: 10px;
+      @include f.fsz(16, 23);
+
+      @include m.mq(pc) {
+        margin-bottom: 17px;
+        font-size: 1.25vw;
+      }
+    }
+
+    &--text {
+      margin-bottom: 40px;
+      @include f.fsz(16, 23);
+      @include m.mq(tab) {
+        margin-bottom: 45px;
+      }
+      @include m.mq(pc) {
+        margin-bottom: 60px;
+        font-size: 0.83vw;
+      }
+    }
+
+    &--button {
+      display: block;
+      width: auto;
+      margin: 0 auto;
+      color: c.$c-base;
+      background-color: c.$c-accent;
+      font-weight: bold;
+      width: 163.16px;
+      height: 42.47px;
+      border-radius: 50px;
+      @include f.fsz(16, 17);
+      @include m.mq(pc) {
+        width: 292px;
+        height: 76px;
+      }
+    }
+  }
+}

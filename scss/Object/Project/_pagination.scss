@@ -1,0 +1,113 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/font" as f;
+@use "../../Foundation/color" as c;
+
+.p-pagination {
+  font-family: f.$font-M1;
+  font-weight: bold;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  @include m.mq(tab) {
+    font-family: f.$font-Roboto;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  @include m.mq(pc) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+
+  &__number {
+    display: none;
+    @include m.mq(tab) {
+      display: inherit;
+      font-family: f.$font-Roboto;
+      font-weight: bold;
+      color: c.$c-base;
+      margin-right: 10px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    padding: 0;
+    @include m.mq(tab) {
+      justify-content: center;
+    }
+
+    &-item {
+      display: none;
+      @include m.mq(tab) {
+        font-weight: bold;
+        // @include f.fsz(16,33);
+        display: inline-block;
+        border: solid 0.1px c.$c-base;
+        background-color: c.$c-accent;
+
+        width: 35px;
+        height: 35px;
+        margin-left: 7.5px;
+        margin-right: 7.5px;
+        text-align: center;
+        text-decoration: none;
+
+        a {
+          display: block;
+          padding-top: 5px;
+          padding-bottom: 5px;
+          padding-right: 1px;
+          text-decoration: none;
+          color: c.$c-base;
+        }
+      }
+
+      &.active {
+        background-color: c.$c-accent-dark;
+        pointer-events: none;
+        color: c.$c-accent;
+      }
+
+      &--prev,
+      &--next {
+        @include m.mq(tab) {
+          font-size: 0;
+        }
+
+        a {
+          text-decoration: none;
+          color: c.$c-base;
+        }
+      }
+
+      &--prev a::before {
+        content: '';
+        background: url(../../../img/icon-prev.png) no-repeat center center/auto 100%;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-left: 8px;
+        margin-right: 8px;
+        margin-top: 9px;
+      }
+
+      &--next a::after {
+        content: '';
+        background: url(../../../img/icon-next.png) no-repeat center center / auto 100%;
+        width: 16px;
+        height: 16px;
+        display: inline-block;
+        margin-left: 8px;
+        margin-top: 9px;
+      }
+    }
+
+
+  }
+}
