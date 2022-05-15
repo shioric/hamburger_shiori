@@ -1,0 +1,22 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-list {
+  color: c.$c-primary;
+  font-family: f.$font-M1;
+  margin-bottom: 30px;
+  @include f.fsz(16,23);
+  @include m.mq(pc) {
+    font-size: 0.83vw;
+  }
+
+  &__first {
+    margin-bottom: 20px;
+  }
+
+  &__second {
+    margin-bottom: 20px;
+    margin-left: 38px;
+  }
+}

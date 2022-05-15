@@ -1,0 +1,63 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-imgList {
+  margin-bottom: 30px;
+  @include m.mq(tab) {
+    margin-bottom: 60px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include m.mq(pc) {
+    margin-bottom: 3.125vw;
+  }
+
+  li {
+    width: 100%;
+    margin: 20px 0 0 0;
+    @include m.mq(tab) {
+      width: calc((100% - 20px) / 2);
+      margin: 20px 0 0 20px;
+    }
+    @include m.mq(pc) {
+      width: calc((100% - 40px) / 3);
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:nth-child(-n+2) {
+      @include m.mq(tab) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(2n+1) {
+      @include m.mq(tab) {
+        margin-left: 0;
+      }
+      @include m.mq(pc) {
+        margin-left: 20px;
+      }
+    }
+
+    &:nth-child(-n+3) {
+      @include m.mq(pc) {
+        margin-top: 0;
+      }
+    }
+
+    &:nth-child(3n+1) {
+      @include m.mq(pc) {
+        margin-left: 0;
+      }
+    }
+
+    img {
+      width: 100%;
+      vertical-align: bottom;
+    }
+  }
+}

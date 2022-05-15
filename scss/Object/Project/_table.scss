@@ -1,0 +1,49 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-table {
+  border: solid 1px c.$c-base;
+  border-collapse: collapse;
+  background-color: c.$c-accent;
+  width: 100%;
+  margin-bottom: 30px;
+  color: c.$c-primary;
+  font-family: f.$font-M1;
+  @include f.fsz(16,23);
+  @include m.mq(tab) {
+    margin-bottom: 60px;
+  }
+  @include m.mq(pc) {
+    font-size: 0.83vw;
+  }
+
+  & tr {
+    border: solid 1px c.$c-base;
+    border-collapse: collapse;
+  }
+
+  & td {
+    border: solid 1px c.$c-base;
+    border-collapse: collapse;
+  }
+
+  &__td {
+    // height: 77px;
+    // @include m.mq(pc) {
+    //   height: 4.01vw;
+    // }
+
+    &--first {
+      width: 40%;
+      padding: 28px 0px 27px 30px;
+      @include m.mq(tab) {
+        width: 30%;
+      }
+    }
+
+    &--second {
+      padding: 28px 0px 27px 30px;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-columnUnit {
+  margin-bottom: 30px;
+  @include m.mq(tab) {
+    margin-bottom: 60px;
+  }
+  @include m.mq(pc) {
+    margin-bottom: 3.125vw;
+  }
+
+  .p-column {
+    display: flex;
+    margin-top: 30px;
+    @include m.mq(tab) {
+      margin-top: 117px;
+    }
+    @include m.mq(pc) {
+      margin-top: 3.125vw;
+    }
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &__imgWrap {
+      width: 42.7%;
+      img {
+        width: 100%;
+        vertical-align: bottom;
+      }
+    }
+
+    &__body {
+      flex: 1;
+      margin: 0 0 0 10px;
+      @include m.mq(tab) {
+        margin: 0 0 0 21px;
+      }
+      @include m.mq(pc) {
+        margin: 0 0 0 2.083vw;
+      }
+    }
+
+    &__text {
+      min-height: 89px;
+      min-width: 144px;
+      @include f.fsz(16,23);
+      font-family: f.$font-M1;
+      color: c.$c-primary;
+      @include m.mq(pc) {
+        font-size: 0.83vw;
+      }
+    }
+  }
+}
+
+.p-column--reverse {
+  flex-direction: row-reverse;
+  .p-column__body {
+    margin: 0 10px 0 0;
+    @include m.mq(tab) {
+      margin: 0 21px 0 0;
+    }
+    @include m.mq(pc) {
+      margin: 0 2.083vw 0 0;
+    }
+  }
+}

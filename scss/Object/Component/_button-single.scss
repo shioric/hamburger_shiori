@@ -1,0 +1,24 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.c-button-single {
+  width: 100%;
+  min-height: 81px;
+  margin-bottom: 30px;
+  background: linear-gradient(#f2ede9, #ded8d3);
+  border-radius: 20px;
+  border: 1px solid c.$c-base;
+  font-family: f.$font-M1;
+  font-weight: bold;
+  color: c.$c-primary;
+  @include f.fsz(16,23);
+  @include m.mq(tab) {
+    width: 429px;
+    height: 104px;
+    margin-bottom: 60px;
+  }
+  @include m.mq(pc) {
+    font-size: 0.83vw;
+  }
+}

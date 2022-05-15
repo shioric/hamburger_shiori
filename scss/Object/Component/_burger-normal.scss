@@ -1,0 +1,15 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.c-burger-normal {
+  display: block;
+  margin: 0 auto 30px;
+  width: 79.7%;
+  @include m.mq(tab) {
+    margin: 0 auto 241px;
+  }
+  @include m.mq(pc) {
+    margin: 0 auto 3.125vw;
+  }
+}

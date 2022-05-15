@@ -1,0 +1,67 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-single-heading {
+
+  &__h3 {
+    color: c.$c-primary;
+    font-family: f.$font-M1;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include f.fsz(24,36);
+    @include m.mq(tab) {
+      margin-bottom: 60px;
+      @include f.fsz(28,42);
+    }
+    @include m.mq(pc) {
+      margin-bottom: 3.125vw;
+      font-size: 1.458vw;
+    }
+  }
+
+  &__h4 {
+    color: c.$c-primary;
+    font-family: f.$font-M1;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include f.fsz(20,29);
+    @include m.mq(tab) {
+      margin-bottom: 60px;
+    }
+    @include m.mq(pc) {
+      margin-bottom: 3.125vw;
+      font-size: 1.041vw;
+    }
+  }
+
+  &__h5 {
+    color: c.$c-primary;
+    font-family: f.$font-M1;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include f.fsz(20,29);
+    @include m.mq(tab) {
+      margin-bottom: 60px;
+    }
+    @include m.mq(pc) {
+      margin-bottom: 3.125vw;
+      font-size: 1.041vw;
+    }
+  }
+
+  &__h6 {
+    color: c.$c-primary;
+    font-family: f.$font-M1;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include f.fsz(20,29);
+    @include m.mq(tab) {
+      margin-bottom: 60px;
+    }
+    @include m.mq(pc) {
+      margin-bottom: 3.125vw;
+      font-size: 1.041vw;
+    }
+  }
+}

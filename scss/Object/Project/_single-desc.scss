@@ -1,0 +1,34 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-single-desc {
+  color: c.$c-primary;
+  margin-bottom: 30px;
+  @include m.mq(tab) {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-family: f.$font-M1;
+    font-weight: bold;
+    margin-bottom: 30px;
+    @include f.fsz(28,42);
+    @include m.mq(tab) {
+      margin-bottom: 3.125vw;
+      margin-top: 0;
+      @include f.fsz(36,54);
+    }
+    @include m.mq(pc) {
+      font-size: 1.875vw;
+    }
+  }
+
+  &__text {
+    font-weight: normal;
+    @include f.fsz(16,23);
+    @include m.mq(pc) {
+      font-size: 0.83vw;
+    }
+  }
+}

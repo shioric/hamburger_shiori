@@ -1,0 +1,20 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.p-code {
+  background-color: #F5F5F5;
+  color: c.$c-primary;
+  padding: 50px;
+  justify-content: left;
+  margin-bottom: 30px;
+  font-family: f.$font-M1;
+  @include f.fsz(16,23);
+  @include m.mq(tab) {
+    margin-bottom: 60px;
+  }
+  @include m.mq(pc) {
+    margin-bottom: 50px;
+    font-size: 0.83vw;
+  }
+}

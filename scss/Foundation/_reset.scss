@@ -21,9 +21,9 @@ h2,
 h3,
 h4,
 p,
-ul[class],
-ol[class],
-li,
+// ul[class],
+// ol[class],
+// li,
 figure,
 figcaption,
 blockquote,
@@ -42,9 +42,9 @@ body {
 }
 
 /* Remove list styles on ul, ol elements with a class attribute */
-/* class属性を持つul、ol要素のリストスタイルを削除 */
-ul[class],
-ol[class] {
+/* class属性を持つul、(ol要素のリストスタイルを削除,
+ol[class]) */
+ul[class] {
   list-style: none;
 }
 

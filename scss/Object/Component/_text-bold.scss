@@ -1,0 +1,18 @@
+@use "../../Foundation/mixin" as m;
+@use "../../Foundation/color" as c;
+@use "../../Foundation/font" as f;
+
+.c-text-bold {
+  font-weight: bold;
+  font-family: f.$font-M1;
+  color: c.$c-primary;
+  margin-bottom: 157px;
+  @include f.fsz(16,23);
+  @include m.mq(tab) {
+    margin-bottom: 168px;
+  }
+  @include m.mq(pc) {
+    font-size: 0.83vw;
+    margin-bottom: 13.18vw;
+  }
+}

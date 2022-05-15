@@ -8,6 +8,16 @@
   @include m.mq(pc) {
     padding: 80px;
   }
+
+  &--more {
+    padding: 30px 20px 20px 20px;
+    @include m.mq(tab) {
+      padding: 60px;
+    }
+    @include m.mq(pc) {
+      padding: 3.125vw 5.2vw 5.2vw 5.2vw;
+    }
+  }
 }
 
 // .c-container {
